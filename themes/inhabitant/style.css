@@ -389,6 +389,22 @@ table {
   width: 100%; }
 
 /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  background-color: black; }
+
+footer aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%; }
+
+/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
@@ -626,8 +642,8 @@ a {
 .textwidget span {
   font-weight: bold; }
 
-.widget-area {
-  width: 60%;
+.page .widget-area {
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,8 +651,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 3%;
   border-left: 1px solid rgba(128, 128, 128, 0.473); }
+  .page .widget-area aside {
+    margin: 0 10%; }
 
 .phone:before {
   font-family: "FontAwesome";
@@ -680,11 +697,14 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
-main {
+.post-13 {
+  margin: 0 20%; }
+
+.find-us {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1120px; }
+  width: 100%; }
 
 .post-15 {
   margin: 0 8%; }
