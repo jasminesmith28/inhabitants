@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget {
+	margin: 0 0 $base__space-unit;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+.textwidget span{
+	font-weight: bold;
+}
+
+.widget-area{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 3%;
+	border-left: 1px solid rgba(128, 128, 128, 0.473);
+}
+
+.phone:before {
+	font-family: "FontAwesome";
+	content: "\f095";
+	padding-right: 5px;	
+ }
+
+ .email:before {
+	font-family: "FontAwesome";
+	content: "\f0e0";
+	text-decoration: none;
+	padding-right: 5px;	
+ }
+
+.icon-pin:before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f3c5";
+	padding-right: 5px;	
+ }
