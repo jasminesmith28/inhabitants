@@ -81,8 +81,11 @@ footer{
   background-color: black;
 }
 
-footer aside{
+.site-info{
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  justify-content: center;
+
+  p{
+    color: white;
+  }
 }

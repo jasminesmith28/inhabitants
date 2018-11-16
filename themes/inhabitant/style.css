@@ -394,15 +394,15 @@ table {
 footer {
   background-color: black; }
 
-footer aside {
+.site-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .site-info p {
+    color: white; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -491,11 +491,10 @@ a {
 
 /* Menus */
 .main-navigation {
-  clear: both;
   display: block;
-  float: left;
-  width: 100%;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.39); }
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -534,7 +533,9 @@ a {
       color: black; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    padding-left: 8px;
+    color: #21759b; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a {
@@ -569,6 +570,25 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+header.site-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 100px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.39); }
+  header.site-header .tent {
+    width: 70px;
+    height: 70px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -700,14 +720,14 @@ a {
 .post-13 {
   margin: 0 20%; }
 
+.post-15 {
+  margin: 0 5%; }
+
 .find-us {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%; }
-
-.post-15 {
-  margin: 0 8%; }
 
 /* Asides */
 .blog .format-aside .entry-title,
@@ -785,3 +805,17 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.home .logo-banner {
+  background-image: url();
+  background-size: cover, cover;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh; }

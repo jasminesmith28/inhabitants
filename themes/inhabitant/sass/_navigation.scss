@@ -26,12 +26,11 @@ a {
 
 /* Menus */
 
+
+
 .main-navigation {
-	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
-	border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+	order: 2;
 	
 	ul {
 		display: none;
@@ -91,6 +90,8 @@ a {
 	a {
 		display: block;
 		text-decoration: none;
+		padding-left: 8px;
+		color: $color__text-screen;
 	}
 
 	.current_page_item > a,
@@ -133,5 +134,19 @@ a {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+header.site-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 100px;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+
+	.tent{
+		width: 70px;
+		height: 70px;
+		order: 1;
 	}
 }
