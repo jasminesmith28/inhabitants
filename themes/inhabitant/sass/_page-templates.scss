@@ -48,7 +48,6 @@
 
 }
 
-
 /* Blog Post archive */
 
 .post-type-archive {
@@ -89,6 +88,27 @@
 
 
 /* Single product post */
+
+
+.single-product {
+
+    .site-content{
+        margin: 2% 5%;
+        }
+
+        article{
+        display: flex;
+
+        .entry-content{
+            width: 50%;
+            margin-left: 2%;
+        }
+        .entry-header{
+            width: 50%;
+        }
+    }
+    
+}
 
 
 /* Adventures archive */

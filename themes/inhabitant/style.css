@@ -728,6 +728,9 @@ header.site-header {
   margin: 0 0 1.5rem; }
 
 /* About and Find us Page */
+.hero-image-header {
+  height: 200px; }
+
 .post-13 {
   margin: 0 20%; }
 
@@ -756,7 +759,7 @@ header.site-header {
 # Footer
 --------------------------------------------------------------*/
 footer {
-  background-color: black; }
+  background-image: url(); }
 
 .site-info {
   display: -webkit-box;
@@ -897,5 +900,18 @@ object {
 /* Poduct archive */
 /* Taxonomy product page */
 /* Single product post */
+.single-product .site-content {
+  margin: 2% 5%; }
+
+.single-product article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .single-product article .entry-content {
+    width: 50%;
+    margin-left: 2%; }
+  .single-product article .entry-header {
+    width: 50%; }
+
 /* Adventures archive */
 /* Single adventure post */
