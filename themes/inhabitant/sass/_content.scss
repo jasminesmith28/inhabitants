@@ -78,14 +78,16 @@
 
 footer{
 	background-image: url(../../../../../wp-content/themes/inhabitant/image/dark-wood@2x.png);
-  }
-  
-  .site-info{
-	display: flex;
-	justify-content: center;
-  
+	height: 250px;
+
+	img{
+	width: 300px;	
+	}
+
 	p{
-	  color: white;
+	display: flex;
+	justify-self: center;
+	color: white;
 	}
   }
 

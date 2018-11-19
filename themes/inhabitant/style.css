@@ -733,16 +733,15 @@ a {
 # Footer
 --------------------------------------------------------------*/
 footer {
-  background-image: url(../../../../../wp-content/themes/inhabitant/image/dark-wood@2x.png); }
-
-.site-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .site-info p {
+  background-image: url(../../../../../wp-content/themes/inhabitant/image/dark-wood@2x.png);
+  height: 250px; }
+  footer img {
+    width: 300px; }
+  footer p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: center;
     color: white; }
 
 /*--------------------------------------------------------------
@@ -838,6 +837,8 @@ object {
       border: rgba(148, 148, 148, 0.5) 0.5px solid;
       -webkit-box-shadow: 0px -8px 0px -1px rgba(148, 148, 148, 0.5);
       box-shadow: 0px -8px 0px -1px rgba(148, 148, 148, 0.5); }
+      .home .shop-section .product-taxonomy-section .product-type .product-type:hover {
+        border: yellow 0.5px solid; }
       .home .shop-section .product-taxonomy-section .product-type img {
         padding-top: 5%;
         width: 30%; }
@@ -850,12 +851,26 @@ object {
           text-decoration: none; }
 
 .home .journal {
-  text-align: center;
-  margin: 5% 2%; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .home .journal img {
+    width: 400px;
+    height: auto; }
+  .home .journal a {
+    color: #21759b;
+    font-size: 20px; }
   .home .journal .selectJournal {
-    width: 100%; }
-    .home .journal .selectJournal img {
-      width: 30%; }
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 32%;
+            flex: 0 1 32%; }
 
 /* Blog Post archive */
 .page-id-10 .site-content {

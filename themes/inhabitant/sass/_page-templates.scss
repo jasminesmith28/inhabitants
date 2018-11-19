@@ -32,6 +32,10 @@
             -moz-box-shadow: 0px -8px 0px -1px rgba(148,148,148,0.5);
             box-shadow: 0px -8px 0px -1px rgba(148,148,148,0.5);
 
+                .product-type:hover {
+                    border:yellow 0.5px solid;
+                }
+
                 img{
                 padding-top: 5%;
                 width: 30%;
@@ -52,17 +56,39 @@
     }
 
     .journal{
-        text-align: center;
-        margin: 5% 2%;
-
-        .selectJournal{
-            width: 100%;
-
+       display:flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+         
             img{
-                width: 30%;
+                width:400px;
+                height: auto;
             }
-        }
+            a {
+                color:$color__text-screen;
+                font-size: 20px;
+         
+            }
+            .selectJournal{
+                flex: 0 1 32%;
+            }
+        
     }
+
+    // .adventure{
+    //     grid-template-columns: repeat(4,1fr);
+    //     grid-auto-rows: 2fr;
+    //     grid-gap: 20px 20px;
+    //     list-style-type: none;
+    //     margin-left: 0;
+    //     padding-left: 0;
+    //     width: 100%;
+
+    //     .grid-item{
+    //         grid-column: 1/span 2;
+    //         grid-row: 1/span 2;
+    //     }
+       
 
 }
 

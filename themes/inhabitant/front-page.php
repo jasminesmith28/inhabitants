@@ -30,34 +30,40 @@ get_header(); ?>
 	</section>
 
 
-<section class="journal" >
+
 <h1>INHABITANT JOURNAL</h1>
+<section class="journal" >
 <?php
    $args = array( 'post_type' => 'post', 'order' => 'ASC', 'posts_per_page' => '3');
    $journal_posts = get_posts( $args ); // returns an array of posts
 ?>
+
 <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
 <div class="selectJournal">
 	<?php the_post_thumbnail();?>
-	<div class="productHeading">
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
    	<p><?php the_date();?> /
 	  <?php echo $post->comment_count; ?> comments </p>
-	  <div>
 </div>
    
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
+
+
+
+
 <section class="adventure">
+<h1>ADVENTURE</h1>
 <?php
    $args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => '4');
    $adventure_posts = get_posts( $args ); // returns an array of posts
 ?>
 <?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
-
+<div class="grid-item">
 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
    <?php the_post_thumbnail();?>
+<div>
 
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
