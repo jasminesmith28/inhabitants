@@ -15,34 +15,54 @@ get_header(); ?>
 		<img src="<?php echo get_template_directory_uri(); ?>/image/inhabitent-logo-full.svg" width="" height="" alt="" />
 	</section>
 
-		<?php if ( have_posts() ) : ?>
+	<section>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<?php if ( has_post_thumbnail() ) : ?>
-						<div class="featured-image-wrapper">
-							<?php the_post_thumbnail(); ?>
-						</div>
-					<?php endif; ?>
+	<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<?php the_content(); ?>
+	</div>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+<?php endwhile; ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<div class="navigation">
+		<div class="next-posts"><?php next_posts_link(); ?></div>
+		<div class="prev-posts"><?php previous_posts_link(); ?></div>
+	</div>
 
-				<?php get_template_part( 'template-parts/content' ); ?>
+<?php else : ?>
 
-			<?php endwhile; ?>
+	<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		<h1>Not Found</h1>
+	</div>
 
-			<?php the_posts_navigation(); ?>
+<?php endif; ?>
+	</section>
 
-		<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+<section class="journal" >
+<?php
+   $args = array( 'post_type' => 'post', 'order' => 'ASC', 'posts_per_page' => '3');
+   $journal_posts = get_posts( $args ); // returns an array of posts
+?>
+<?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
+   <h2><?php the_title();?></h2>
+   <?php the_post_thumbnail();?>
+<?php endforeach; wp_reset_postdata(); ?>
+</section>
 
-		<?php endif; ?>
+<section class="adventure">
+<?php
+   $args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => '4');
+   $adventure_posts = get_posts( $args ); // returns an array of posts
+?>
+<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
+   <h2><?php the_title();?></h2>
+   <?php the_post_thumbnail();?>
+<?php endforeach; wp_reset_postdata(); ?>
+</section>
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

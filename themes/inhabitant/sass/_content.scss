@@ -32,6 +32,9 @@
 	margin: 0 0 $base__space-unit;
 }
 
+
+/* About and Find us Page */
+
 .post-13{
 	margin: 0 20%;
 }
@@ -62,4 +65,22 @@
 	display: block;
 }
 
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer{
+	background-color: black;
+  }
+  
+  .site-info{
+	display: flex;
+	justify-content: center;
+  
+	p{
+	  color: white;
+	}
+  }
 

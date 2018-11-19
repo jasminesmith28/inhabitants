@@ -389,22 +389,6 @@ table {
   width: 100%; }
 
 /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-footer {
-  background-color: black; }
-
-.site-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .site-info p {
-    color: white; }
-
-/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
@@ -675,6 +659,32 @@ header.site-header {
   .page .widget-area aside {
     margin: 0 10%; }
 
+.archive .widget-area {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 1px solid rgba(128, 128, 128, 0.473); }
+  .archive .widget-area aside {
+    margin: 0 10%; }
+
+.journal-template-default .widget-area {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 1px solid rgba(128, 128, 128, 0.473); }
+  .journal-template-default .widget-area aside {
+    margin: 0 10%; }
+
 .phone:before {
   font-family: "FontAwesome";
   content: "\f095";
@@ -717,6 +727,7 @@ header.site-header {
   clear: both;
   margin: 0 0 1.5rem; }
 
+/* About and Find us Page */
 .post-13 {
   margin: 0 20%; }
 
@@ -740,6 +751,22 @@ header.site-header {
 
 .bypostauthor {
   display: block; }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  background-color: black; }
+
+.site-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .site-info p {
+    color: white; }
 
 /*--------------------------------------------------------------
 # Media
@@ -819,3 +846,54 @@ object {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh; }
+
+.home .adventure {
+  display: grid; }
+  .home .adventure img {
+    position: relative;
+    width: 50%; }
+
+.home .journal {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .home .journal h2 {
+    position: absolute; }
+  .home .journal img {
+    position: relative;
+    width: 30%;
+    height: 80%;
+    margin: 0 1.5%; }
+
+/* Blog Post archive */
+.post-type-archive .site-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.post-type-archive img {
+  width: 100%; }
+
+.post-type-archive .content-area {
+  width: 80%;
+  margin: 0 5%; }
+
+/* Single Blog post */
+.journal-template-default .site-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.journal-template-default .content-area {
+  width: 80%;
+  margin: 0 5%; }
+
+/* Poduct archive */
+/* Taxonomy product page */
+/* Single product post */
+/* Adventures archive */
+/* Single adventure post */
