@@ -47,6 +47,8 @@ get_header(); ?>
 ?>
 <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
    <h2><?php the_title();?></h2>
+   <p><?php the_date();?>
+  <?php echo $post->comment_count; ?> comments </p>
    <?php the_post_thumbnail();?>
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
@@ -61,6 +63,7 @@ get_header(); ?>
    <?php the_post_thumbnail();?>
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
+
 
 
 
