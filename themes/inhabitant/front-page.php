@@ -46,8 +46,8 @@ get_header(); ?>
    $journal_posts = get_posts( $args ); // returns an array of posts
 ?>
 <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-   <h2><?php the_title();?></h2>
-   <p><?php the_date();?>
+<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+   <p><?php the_date();?> /
   <?php echo $post->comment_count; ?> comments </p>
    <?php the_post_thumbnail();?>
 <?php endforeach; wp_reset_postdata(); ?>
