@@ -87,13 +87,6 @@ a {
 			color: black;
 		}
 	}
-	a {
-		display: block;
-		text-decoration: none;
-		padding-left: 8px;
-		color: $color__text-screen;
-	}
-
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
@@ -137,16 +130,34 @@ a {
 	}
 }
 
-header.site-header{
+.site-header{
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	position: relative;
+	background: transparent;
 	padding: 20px 100px;
-	border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+}
+.tent{
+	width: 70px;
+	height: 70px;
+	order: 1;
+}
+.home header.site-header, .page-template-page-about header.site-header{
+	background-color: transparent;
+	position: absolute;
 
-	.tent{
-		width: 70px;
-		height: 70px;
-		order: 1;
+	a{
+	color: white;
+	padding-left: 20px;
+	text-decoration: none;
 	}
 }
+
+.archive header.site-header, .page-id-15 header.site-header{
+	background-color: white;
+	position: relative;
+	border-bottom: gray 1px solid;
+}
+
+

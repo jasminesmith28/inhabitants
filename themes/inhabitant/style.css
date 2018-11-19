@@ -392,40 +392,6 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
-
 /* Fields */
 input[type="text"],
 input[type="email"],
@@ -515,11 +481,6 @@ a {
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
       color: black; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none;
-    padding-left: 8px;
-    color: #21759b; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a {
@@ -555,24 +516,37 @@ a {
   text-align: right;
   width: 50%; }
 
-header.site-header {
+.site-header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px 100px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.39); }
-  header.site-header .tent {
-    width: 70px;
-    height: 70px;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
+  position: relative;
+  background: transparent;
+  padding: 20px 100px; }
+
+.tent {
+  width: 70px;
+  height: 70px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.home header.site-header, .page-template-page-about header.site-header {
+  background-color: transparent;
+  position: absolute; }
+  .home header.site-header a, .page-template-page-about header.site-header a {
+    color: white;
+    padding-left: 20px;
+    text-decoration: none; }
+
+.archive header.site-header, .page-id-15 header.site-header {
+  background-color: white;
+  position: relative;
+  border-bottom: gray 1px solid; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -672,7 +646,7 @@ header.site-header {
   .archive .widget-area aside {
     margin: 0 10%; }
 
-.journal-template-default .widget-area {
+.page-id-10 .widget-area {
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,7 +656,7 @@ header.site-header {
       -ms-flex-direction: column;
           flex-direction: column;
   border-left: 1px solid rgba(128, 128, 128, 0.473); }
-  .journal-template-default .widget-area aside {
+  .page-id-10 .widget-area aside {
     margin: 0 10%; }
 
 .phone:before {
@@ -759,7 +733,7 @@ header.site-header {
 # Footer
 --------------------------------------------------------------*/
 footer {
-  background-image: url(); }
+  background-image: url(../../../../../wp-content/themes/inhabitant/image/dark-wood@2x.png); }
 
 .site-info {
   display: -webkit-box;
@@ -836,7 +810,7 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .home .logo-banner {
-  background-image: url();
+  background-image: url(../../../../../wp-content/themes/inhabitant/image/home-hero.jpg);
   background-size: cover, cover;
   width: 100%;
   display: -webkit-box;
@@ -850,68 +824,73 @@ object {
           align-items: center;
   height: 100vh; }
 
-.home .adventure {
-  display: grid; }
-  .home .adventure img {
-    position: relative;
-    width: 50%; }
+.home .shop-section {
+  text-align: center;
+  margin: 5% 2%; }
+  .home .shop-section .product-taxonomy-section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .home .shop-section .product-taxonomy-section .product-type {
+      height: 300px;
+      margin: 0 1%;
+      border: rgba(148, 148, 148, 0.5) 0.5px solid;
+      -webkit-box-shadow: 0px -8px 0px -1px rgba(148, 148, 148, 0.5);
+      box-shadow: 0px -8px 0px -1px rgba(148, 148, 148, 0.5); }
+      .home .shop-section .product-taxonomy-section .product-type img {
+        padding-top: 5%;
+        width: 30%; }
+      .home .shop-section .product-taxonomy-section .product-type .selectTaxonomy {
+        background-color: #008B8B;
+        width: 120px;
+        height: 40px; }
+        .home .shop-section .product-taxonomy-section .product-type .selectTaxonomy a {
+          color: white;
+          text-decoration: none; }
 
 .home .journal {
-  width: 100%;
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .home .journal a {
-    position: absolute; }
-  .home .journal p {
-    position: absolute; }
-  .home .journal img {
-    position: relative;
-    width: 30%;
-    height: 80%;
-    margin: 0 1.5%; }
+  text-align: center;
+  margin: 5% 2%; }
+  .home .journal .selectJournal {
+    width: 100%; }
+    .home .journal .selectJournal img {
+      width: 30%; }
 
 /* Blog Post archive */
-.post-type-archive .site-content {
+.page-id-10 .site-content {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.post-type-archive img {
+.page-id-10 img {
   width: 100%; }
 
-.post-type-archive .content-area {
+.page-id-10 .content-area {
   width: 80%;
   margin: 0 5%; }
 
 /* Single Blog post */
-.journal-template-default .site-content {
+.single-post .site-content {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.journal-template-default .content-area {
+.single-post .content-area {
   width: 80%;
   margin: 0 5%; }
 
 /* Poduct archive */
 /* Taxonomy product page */
 /* Single product post */
-.single-product .site-content {
-  margin: 2% 5%; }
-
-.single-product article {
+.single-product {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .single-product article .entry-content {
-    width: 50%;
-    margin-left: 2%; }
-  .single-product article .entry-header {
-    width: 50%; }
+  .single-product img {
+    width: 40%; }
 
 /* Adventures archive */
 /* Single adventure post */

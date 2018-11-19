@@ -12,44 +12,40 @@ get_header(); ?>
 
 
 	<section class="logo-banner">
-		<img src="<?php echo get_template_directory_uri(); ?>/image/inhabitent-logo-full.svg" width="" height="" alt="" />
+		<img src="<?php echo get_template_directory_uri(); ?>/image/inhabitent-logo-full.svg"/>
 	</section>
 
-	<section>
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-	<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-		<?php the_content(); ?>
+	<section class="shop-section">
+	<h1>SHOP STUFF</h1>
+<div class="product-taxonomy-section">
+<?php foreach (get_terms(array("taxonomy" => "product-type")) as $product_type): ?>
+                    <div class="product-type">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $product_type->slug ?>.svg">
+						<p><?php echo $product_type->description ?></p>
+		
+     <button class="selectTaxonomy"><a href="<?php echo get_term_link($product_type->slug, 'product-type' ); ?>"><?php echo $product_type->name ?> stuff</a></button>
+                    </div>
+            <?php endforeach;?>
 	</div>
-
-<?php endwhile; ?>
-
-	<div class="navigation">
-		<div class="next-posts"><?php next_posts_link(); ?></div>
-		<div class="prev-posts"><?php previous_posts_link(); ?></div>
-	</div>
-
-<?php else : ?>
-
-	<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-		<h1>Not Found</h1>
-	</div>
-
-<?php endif; ?>
 	</section>
 
 
 <section class="journal" >
+<h1>INHABITANT JOURNAL</h1>
 <?php
    $args = array( 'post_type' => 'post', 'order' => 'ASC', 'posts_per_page' => '3');
    $journal_posts = get_posts( $args ); // returns an array of posts
 ?>
 <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-   <p><?php the_date();?> /
-  <?php echo $post->comment_count; ?> comments </p>
-   <?php the_post_thumbnail();?>
+<div class="selectJournal">
+	<?php the_post_thumbnail();?>
+	<div class="productHeading">
+	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+   	<p><?php the_date();?> /
+	  <?php echo $post->comment_count; ?> comments </p>
+	  <div>
+</div>
+   
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
@@ -59,8 +55,10 @@ get_header(); ?>
    $adventure_posts = get_posts( $args ); // returns an array of posts
 ?>
 <?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
-   <h2><?php the_title();?></h2>
+
+<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
    <?php the_post_thumbnail();?>
+
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
 

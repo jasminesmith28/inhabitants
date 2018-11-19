@@ -14,9 +14,12 @@ get_header(); ?>
 	<section class="shopping-product">
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-			<?php the_post_navigation(); ?>
+		<?php the_post_thumbnail();?>
+		<div class="product-description">
+		<h2><?php the_title();?></h2>
+		<?php echo CFS()->get ('price'); ?>
+		<p><?php the_content();?></p>
+		</div>
 
 
 		<?php endwhile; // End of the loop. ?>
