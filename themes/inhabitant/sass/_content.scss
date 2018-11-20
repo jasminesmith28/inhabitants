@@ -59,6 +59,24 @@
 
 }
 
+.findUs{
+    display: flex;
+
+    .findUsLink{
+        width: 70%;
+		margin: 3% 5%;
+	}
+
+	.widgetSidebar{
+        width: 30%;
+        border-left: rgba(128, 128, 128, 0.445) 1px solid;
+
+        aside{
+            margin-left: 10%;
+        }
+    }
+}
+
 /* Asides */
 
 .blog .format-aside .entry-title,
@@ -75,6 +93,9 @@
 	display: block;
 }
 
+h3{
+ font-size: 30px;
+}
 
 
 /*--------------------------------------------------------------
