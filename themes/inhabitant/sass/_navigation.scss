@@ -30,6 +30,7 @@ a {
 
 .main-navigation {
 	display: block;
+	padding-top: 15px;
 	order: 2;
 	
 	ul {
@@ -140,10 +141,10 @@ a {
 }
 .tent{
 	width: 70px;
-	height: 70px;
+	height: 40px;
 	order: 1;
 }
-.home header.site-header, .page-template-page-about header.site-header{
+.home header.site-header, .page-id-13 header.site-header{
 	background-color: transparent;
 	position: absolute;
 
@@ -154,10 +155,16 @@ a {
 	}
 }
 
-.archive header.site-header, .page-id-15 header.site-header{
+.archive header.site-header, .page-id-15 header.site-header, .page-id-10 header.site-header, .single header.site-header{
 	background-color: white;
 	position: relative;
 	border-bottom: gray 1px solid;
+
+	a{
+		color: darkcyan;
+		padding-left: 20px;
+		text-decoration: none;
+		}
 }
 
 

@@ -19,8 +19,12 @@ get_header(); ?>
 		<h2><?php the_title();?></h2>
 		<?php echo CFS()->get ('price'); ?>
 		<p><?php the_content();?></p>
+		<div class="socialMedia">
+				<button><i class="fab fa-facebook-f"></i> LIKE</button>
+				<button><i class="fab fa-twitter"></i> TWEET</button>
+				<button ><i class="fab fa-pinterest"></i> PIN</button>
+				</div>
 		</div>
-
 
 		<?php endwhile; // End of the loop. ?>
 		</section>

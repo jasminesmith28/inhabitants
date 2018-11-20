@@ -16,43 +16,6 @@
 	display: none;
 }
 
-.textwidget span{
-	font-weight: bold;
-}
-
-.page .widget-area{
-	width: 45%;
-	display: flex;
-	flex-direction: column;
-	border-left: 1px solid rgba(128, 128, 128, 0.473);
-
-	aside{
-		margin: 0 10%;
-	}
-}
-
-.archive .widget-area{
-	width: 35%;
-	display: flex;
-	flex-direction: column;
-	border-left: 1px solid rgba(128, 128, 128, 0.473);
-
-	aside{
-		margin: 0 10%;
-	}
-}
-
-.page-id-10 .widget-area{
-	width: 35%;
-	display: flex;
-	flex-direction: column;
-	border-left: 1px solid rgba(128, 128, 128, 0.473);
-
-	aside{
-		margin: 0 10%;
-	}
-}
-
 .phone:before {
 	font-family: "FontAwesome";
 	content: "\f095";

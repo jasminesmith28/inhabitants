@@ -35,24 +35,29 @@
 
 /* About and Find us Page */
 
+.about{
 
-.hero-image-header{
-	height: 200px;
+	h1{
+		display: none;
+	}
+	.entry-content{
+		h1{
+			display: flex;
+			color: black;
+		}
+		.hero-image-header{
+			height: 600px;
+		}
+
+		h2{
+			margin: 2% 12%;
+		}
+		p{
+			margin: 2% 12%;
+		}
+	}
+
 }
-
-.post-13{
-	margin: 0 20%;
-}
-
-.post-15{
-	margin: 0 5%;
-}
-
-.find-us{
-	display: flex;
-	width: 100%;
-}
-
 
 /* Asides */
 

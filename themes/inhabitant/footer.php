@@ -10,7 +10,6 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-
 				<div class="footer-logo">
 					<img src="<?php echo get_template_directory_uri(); ?>/image/inhabitent-logo-text.svg"/>
 					</div>

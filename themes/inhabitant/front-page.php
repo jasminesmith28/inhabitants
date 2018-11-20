@@ -15,8 +15,8 @@ get_header(); ?>
 		<img src="<?php echo get_template_directory_uri(); ?>/image/inhabitent-logo-full.svg"/>
 	</section>
 
-	<section class="shop-section">
 	<h1>SHOP STUFF</h1>
+	<section class="shop-section">
 <div class="product-taxonomy-section">
 <?php foreach (get_terms(array("taxonomy" => "product-type")) as $product_type): ?>
                     <div class="product-type">
@@ -41,31 +41,28 @@ get_header(); ?>
 <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
 <div class="selectJournal">
 	<?php the_post_thumbnail();?>
-	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-   	<p><?php the_date();?> /
-	  <?php echo $post->comment_count; ?> comments </p>
+	<div class="journalDescription">
+	<p><?php echo get_the_date();?> /<?php echo $post->comment_count; ?> comments </p>
+	<p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+<button class="journalButton"><a href="<?php the_permalink(); ?>">READ ENTRY</a></button>
+	</div>
 </div>
    
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
-
-
-
-
-<section class="adventure">
 <h1>ADVENTURE</h1>
+<section class="adventure">
 <?php
    $args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => '4');
    $adventure_posts = get_posts( $args ); // returns an array of posts
 ?>
+<div class ="selectAdventure">
 <?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
-<div class="grid-item">
 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-   <?php the_post_thumbnail();?>
-<div>
-
+   <?php the_post_thumbnail();?> 
 <?php endforeach; wp_reset_postdata(); ?>
+</div>
 </section>
 
 
