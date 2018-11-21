@@ -5,6 +5,17 @@
 .widget {
 	margin: 0 0 $base__space-unit;
 
+	ul{
+		list-style: none;
+		padding: 0;
+		margin-left: 0;
+
+		a{
+			text-decoration: none;
+		}
+
+	}
+
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;

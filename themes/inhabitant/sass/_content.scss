@@ -33,7 +33,7 @@
 }
 
 
-/* About and Find us Page */
+/* About Page */
 
 .about{
 
@@ -58,6 +58,8 @@
 	}
 
 }
+
+/* Find us Page */
 
 .findUs{
     display: flex;
@@ -105,15 +107,37 @@ h3{
 footer{
 	background-image: url(../../../../../wp-content/themes/inhabitant/image/dark-wood@2x.png);
 	height: 250px;
+	display: flex;
+	justify-content: space-around;
+
+	.widget-area{
+		display: flex;
+		width: 520px;
+
+		h2{
+			color: orange;
+		}
+
+		aside{
+			width: 250px;
+			margin: 0 2%;
+			text-align: left;
+		}
+
+		.widget_archive{
+			display: none;
+		}
+	}
 
 	img{
-	width: 300px;	
+	width: 300px;
+	margin: 10% 2% 0 0;
 	}
 
 	p{
-	display: flex;
-	justify-self: center;
 	color: white;
+	display: flex;
+	align-self: flex-end;
 	}
   }
 

@@ -41,6 +41,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+.archiveJournal .archiveJournalLink .journalImage .journalTitle, .singleJournal .singleJournalLink .journalSingleImage .journalSingleTitle {
+  position: absolute;
+  background-color: #158585;
+  width: 600px;
+  height: 100px;
+  top: 80px; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -225,43 +232,43 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'Merriweather';
-  src: url("Merriweather-LightItalic.eot");
-  src: url("Merriweather-LightItalic.eot?#iefix") format("embedded-opentype"), url("Merriweather-LightItalic.woff2") format("woff2"), url("Merriweather-LightItalic.woff") format("woff"), url("Merriweather-LightItalic.ttf") format("truetype"), url("Merriweather-LightItalic.svg#Merriweather-LightItalic") format("svg");
+  src: url("../../Merriweather-Light.eot");
+  src: url("../../Merriweather-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../Merriweather-LightItalic.woff2") format("woff2"), url("../../Merriweather-LightItalic.woff") format("woff"), url("../../Merriweather-LightItalic.ttf") format("truetype"), url("../../Merriweather-LightItalic.svg#Merriweather-LightItalic") format("svg");
   font-weight: 300;
   font-style: italic; }
 
 @font-face {
   font-family: 'Novecento';
-  src: url("4ce551a96c590b6ed4136a8042873739.eot");
-  src: url("4ce551a96c590b6ed4136a8042873739.eot?#iefix") format("embedded-opentype"), url("4ce551a96c590b6ed4136a8042873739.woff2") format("woff2"), url("4ce551a96c590b6ed4136a8042873739.woff") format("woff"), url("4ce551a96c590b6ed4136a8042873739.ttf") format("truetype"), url("4ce551a96c590b6ed4136a8042873739.svg#.") format("svg");
+  src: url("../../4ce551a96c590b6ed4136a8042873739.eot");
+  src: url("../../4ce551a96c590b6ed4136a8042873739.eot?#iefix") format("embedded-opentype"), url("../../4ce551a96c590b6ed4136a8042873739.woff2") format("woff2"), url("../../4ce551a96c590b6ed4136a8042873739.woff") format("woff"), url("../../4ce551a96c590b6ed4136a8042873739.ttf") format("truetype"), url("../../4ce551a96c590b6ed4136a8042873739.svg#.") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Merriweather';
-  src: url("Merriweather-BoldItalic.eot");
-  src: url("Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("Merriweather-BoldItalic.woff2") format("woff2"), url("Merriweather-BoldItalic.woff") format("woff"), url("Merriweather-BoldItalic.ttf") format("truetype"), url("Merriweather-BoldItalic.svg#Merriweather-BoldItalic") format("svg");
+  src: url("../../Merriweather-BoldItalic.eot");
+  src: url("../../Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../Merriweather-BoldItalic.woff2") format("woff2"), url("../../Merriweather-BoldItalic.woff") format("woff"), url("../../Merriweather-BoldItalic.ttf") format("truetype"), url("../../Merriweather-BoldItalic.svg#Merriweather-BoldItalic") format("svg");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: 'Merriweather';
-  src: url("Merriweather-Light.eot");
-  src: url("Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("Merriweather-Light.woff2") format("woff2"), url("Merriweather-Light.woff") format("woff"), url("Merriweather-Light.ttf") format("truetype"), url("Merriweather-Light.svg#Merriweather-Light") format("svg");
+  src: url("../../Merriweather-Light.eot");
+  src: url("../../Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("../../Merriweather-Light.woff2") format("woff2"), url("../../Merriweather-Light.woff") format("woff"), url("../../Merriweather-Light.ttf") format("truetype"), url("../../Merriweather-Light.svg#Merriweather-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Novecento';
-  src: url("d71816deae5254266f60919f2c6f72a2.eot");
-  src: url("d71816deae5254266f60919f2c6f72a2.eot?#iefix") format("embedded-opentype"), url("d71816deae5254266f60919f2c6f72a2.woff2") format("woff2"), url("d71816deae5254266f60919f2c6f72a2.woff") format("woff"), url("d71816deae5254266f60919f2c6f72a2.ttf") format("truetype"), url("d71816deae5254266f60919f2c6f72a2.svg#.") format("svg");
+  src: url("../../d71816deae5254266f60919f2c6f72a2.eot");
+  src: url("../../d71816deae5254266f60919f2c6f72a2.eot?#iefix") format("embedded-opentype"), url("../../d71816deae5254266f60919f2c6f72a2.woff2") format("woff2"), url("../../d71816deae5254266f60919f2c6f72a2.woff") format("woff"), url("../../d71816deae5254266f60919f2c6f72a2.ttf") format("truetype"), url("../../d71816deae5254266f60919f2c6f72a2.svg#.") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Merriweather';
-  src: url("Merriweather-Bold.eot");
-  src: url("Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("Merriweather-Bold.woff2") format("woff2"), url("Merriweather-Bold.woff") format("woff"), url("Merriweather-Bold.ttf") format("truetype"), url("Merriweather-Bold.svg#Merriweather-Bold") format("svg");
+  src: url("../../Merriweather-Bold.eot");
+  src: url("../../Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("../../Merriweather-Bold.woff2") format("woff2"), url("../../Merriweather-Bold.woff") format("woff"), url("../../Merriweather-Bold.ttf") format("truetype"), url("../../Merriweather-Bold.svg#Merriweather-Bold") format("svg");
   font-weight: bold;
   font-style: normal; }
 
@@ -544,11 +551,11 @@ a {
     padding-left: 20px;
     text-decoration: none; }
 
-.archive header.site-header, .page-id-15 header.site-header, .page-id-10 header.site-header, .single header.site-header {
+.archive header.site-header, .page-id-15 header.site-header, .page-id-10 header.site-header, .single header.site-header, .error404 header.site-header {
   background-color: white;
   position: relative;
   border-bottom: gray 1px solid; }
-  .archive header.site-header a, .page-id-15 header.site-header a, .page-id-10 header.site-header a, .single header.site-header a {
+  .archive header.site-header a, .page-id-15 header.site-header a, .page-id-10 header.site-header a, .single header.site-header a, .error404 header.site-header a {
     color: darkcyan;
     padding-left: 20px;
     text-decoration: none; }
@@ -615,6 +622,12 @@ a {
 .widget {
   margin: 0 0 1.5rem;
   /* Make sure select elements fit in widgets. */ }
+  .widget ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 0; }
+    .widget ul a {
+      text-decoration: none; }
   .widget select {
     max-width: 100%; }
 
@@ -664,7 +677,7 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
-/* About and Find us Page */
+/* About Page */
 .about h1 {
   display: none; }
 
@@ -683,6 +696,7 @@ a {
 .about .entry-content p {
   margin: 2% 12%; }
 
+/* Find us Page */
 .findUs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -716,15 +730,35 @@ h3 {
 --------------------------------------------------------------*/
 footer {
   background-image: url(../../../../../wp-content/themes/inhabitant/image/dark-wood@2x.png);
-  height: 250px; }
-  footer img {
-    width: 300px; }
-  footer p {
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  footer .widget-area {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-self: center;
-    color: white; }
+    width: 520px; }
+    footer .widget-area h2 {
+      color: orange; }
+    footer .widget-area aside {
+      width: 250px;
+      margin: 0 2%;
+      text-align: left; }
+    footer .widget-area .widget_archive {
+      display: none; }
+  footer img {
+    width: 300px;
+    margin: 10% 2% 0 0; }
+  footer p {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
 
 /*--------------------------------------------------------------
 # Media
@@ -845,10 +879,12 @@ object {
             justify-content: space-between; }
     .home .journal img {
       width: 90%;
-      height: 250px; }
+      height: 200px; }
     .home .journal a {
       color: #21759b;
-      font-size: 20px; }
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0 2%; }
     .home .journal .selectJournal {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -859,8 +895,19 @@ object {
               flex-direction: column;
       text-align: left; }
     .home .journal .journalDescription {
-      border: gray 1px solid;
-      width: 90%; }
+      border: rgba(128, 128, 128, 0.411) 1px solid;
+      border-top: rgba(128, 128, 128, 0.356) 4px solid;
+      width: 90%;
+      height: 210px; }
+      .home .journal .journalDescription button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+      .home .journal .journalDescription a {
+        text-decoration: none;
+        text-transform: capitalize; }
     .home .journal .journalButton {
       outline: black 1px solid;
       background-color: transparent;
@@ -871,7 +918,7 @@ object {
         text-decoration: none;
         font-size: 14px; }
 
-/* Blog Post archive */
+/* Journal Post archive */
 .archiveJournal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,24 +931,18 @@ object {
       border: 0;
       margin: 0;
       padding: 0; }
-      .archiveJournal .archiveJournalLink .journalImage .journalTitle {
-        position: absolute;
-        background-color: #158585;
-        width: 600px;
-        height: 100px;
-        top: 80px; }
-        .archiveJournal .archiveJournalLink .journalImage .journalTitle a {
-          margin: 4% 2%;
-          color: white;
-          text-decoration: none;
-          font-size: 35px; }
+      .archiveJournal .archiveJournalLink .journalImage .journalTitle a {
+        margin: 4% 2%;
+        color: white;
+        text-decoration: none;
+        font-size: 35px; }
       .archiveJournal .archiveJournalLink .journalImage .journalInfo {
         position: absolute;
         background-color: #137e7e;
         width: 450px;
         height: 40px;
         top: 475px;
-        left: 324px; }
+        left: 256px; }
         .archiveJournal .archiveJournalLink .journalImage .journalInfo p {
           color: white;
           text-decoration: none;
@@ -921,7 +962,7 @@ object {
     .archiveJournal .widgetSidebar aside {
       margin-left: 10%; }
 
-/* Single Blog post */
+/* Single Journal post */
 .singleJournal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -944,24 +985,18 @@ object {
         width: 100px;
         height: 35px;
         background-color: transparent; }
-      .singleJournal .singleJournalLink .journalSingleImage .journalSingleTitle {
-        position: absolute;
-        background-color: #158585;
-        width: 600px;
-        height: 100px;
-        top: 80px; }
-        .singleJournal .singleJournalLink .journalSingleImage .journalSingleTitle a {
-          margin: 4% 2%;
-          color: white;
-          text-decoration: none;
-          font-size: 35px; }
+      .singleJournal .singleJournalLink .journalSingleImage .journalSingleTitle a {
+        margin: 4% 2%;
+        color: white;
+        text-decoration: none;
+        font-size: 35px; }
       .singleJournal .singleJournalLink .journalSingleImage .journalSingleInfo {
         position: absolute;
         background-color: #137e7e;
         width: 450px;
         height: 40px;
-        top: 475px;
-        left: 324px; }
+        top: 430px;
+        left: 256px; }
         .singleJournal .singleJournalLink .journalSingleImage .journalSingleInfo p {
           color: white;
           text-decoration: none;
@@ -982,22 +1017,26 @@ object {
       margin-left: 10%; }
 
 /* Poduct archive */
-.post-type-archive-product {
+.page-header {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  margin: 2% 0; }
+  .page-header a {
+    text-decoration: none;
+    margin: 0 2%; }
 
 .productMainContainer {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(4, auto); }
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  margin: 0 5%;
+  margin-bottom: 1.5rem; }
   .productMainContainer .product-taxonomy img {
-    width: 85%;
-    height: 100%; }
+    width: auto;
+    height: 230px; }
   .productMainContainer .product-taxonomy .productDescription {
-    margin: 0 7%;
-    border: rgba(0, 0, 0, 0.295) 1px solid; }
+    border: rgba(66, 65, 65, 0.295) 1px solid;
+    height: 60px;
+    text-align: center; }
 
 /* Taxonomy Product page */
 .tax-product-type {
@@ -1052,3 +1091,26 @@ object {
 
 /* Adventures archive */
 /* Single adventure post */
+/* 404 */
+.error-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .error-404 .page-content {
+    width: 70%;
+    margin: 3% 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .error-404 .page-content .widget ul {
+      list-style: none;
+      padding: 0;
+      margin-left: 0; }
+    .error-404 .page-content .widget a {
+      text-decoration: none; }
+  .error-404 .widget404 {
+    width: 30%;
+    border-left: rgba(128, 128, 128, 0.445) 1px solid; }
+    .error-404 .widget404 aside {
+      margin-left: 10%; }

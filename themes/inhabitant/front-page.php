@@ -42,7 +42,7 @@ get_header(); ?>
 <div class="selectJournal">
 	<?php the_post_thumbnail();?>
 	<div class="journalDescription">
-	<p><?php echo get_the_date();?> /<?php echo $post->comment_count; ?> comments </p>
+	<p><?php echo get_the_date();?> /<?php echo $post->comment_count; ?>  comments </p>
 	<p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
 <button class="journalButton"><a href="<?php the_permalink(); ?>">READ ENTRY</a></button>
 	</div>

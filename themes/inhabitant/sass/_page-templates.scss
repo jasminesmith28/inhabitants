@@ -17,7 +17,6 @@
     height: 100vh; 
     }
 
-    
     .shop-section{
         margin: 5% 2%;
 
@@ -64,11 +63,13 @@
          
             img{
                 width: 90%;
-                height: 250px;
+                height: 200px;
             }
             a {
                 color:$color__text-screen;
+                font-weight: bold;
                 font-size: 20px;
+                margin: 0 2%;
          
             }
             .selectJournal{
@@ -78,8 +79,20 @@
             }
 
             .journalDescription{
-                border: gray 1px solid;
+                border: rgba(128, 128, 128, 0.411) 1px solid;
+                border-top:rgba(128, 128, 128, 0.356) 4px solid;;
                 width: 90%;
+                height: 210px;
+
+                button{
+                display: flex; 
+                align-self: flex-end;
+                }
+
+                a{
+                    text-decoration: none;
+                    text-transform: capitalize;
+                }
             }
 
             .journalButton{
@@ -97,14 +110,11 @@
         
     }
 
-      
-
-       
        
 
 }
 
-/* Blog Post archive */
+/* Journal Post archive */
 
 .archiveJournal{
     display: flex;
@@ -120,11 +130,7 @@
              padding: 0;
 
             .journalTitle {
-                position: absolute;
-                background-color: rgb(21, 133, 133);
-                width: 600px;
-                height: 100px;
-                top: 80px;
+                @extend %green-title;
 
                 a{
                     margin: 4% 2%;
@@ -140,7 +146,7 @@
                 width: 450px;
                 height: 40px;
                 top: 475px;
-                left: 324px;
+                left: 256px;
                 p{
                     color: white;
                     text-decoration: none;
@@ -176,7 +182,7 @@
 
 
 
-/* Single Blog post */
+/* Single Journal post */
 
 
 
@@ -206,11 +212,7 @@
             }
 
             .journalSingleTitle {
-                position: absolute;
-                background-color: rgb(21, 133, 133);
-                width: 600px;
-                height: 100px;
-                top: 80px;
+                @extend %green-title;
 
                 a{
                     margin: 4% 2%;
@@ -225,8 +227,9 @@
                 background-color: rgb(19, 126, 126);
                 width: 450px;
                 height: 40px;
-                top: 475px;
-                left: 324px;
+                top: 430px;
+                left: 256px;
+        
                 p{
                     color: white;
                     text-decoration: none;
@@ -265,32 +268,35 @@
 
 /* Poduct archive */
 
-.post-type-archive-product{
+.page-header{
     text-align: center;
-    display: flex;
+    margin: 2% 0;
 
-    // .page-header{
-    //     border-bottom: gray 1px solid;
-    //     border-style: dotted;
-    // }
+    a{
+        text-decoration: none;
+        margin: 0 2%;
+    }
 }
+
 
 .productMainContainer{
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, auto);
-    // margin: 7% 0 12% 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+    margin: 0 5%;
+    margin-bottom: 1.5rem;
 
     .product-taxonomy{
     
         img{
-            width: 85%;
-            height: 100%;
+            width: auto;
+            height: 230px;
         }
 
         .productDescription{
-        margin: 0 7%;
-        border: rgba(0, 0, 0, 0.295) 1px solid;
+        border: rgba(66, 65, 65, 0.295) 1px solid;
+        height: 60px;
+        text-align: center;
         }
 
     }
@@ -370,3 +376,38 @@
 
 
 /* Single adventure post */
+
+
+
+/* 404 */
+
+.error-404{
+    display: flex;
+    
+    .page-content{
+    width: 70%;
+    margin: 3% 5%;
+    flex-direction: column;
+
+        .widget {
+            ul{
+                list-style: none;
+                padding: 0;
+                margin-left: 0;
+            }
+        
+            a{
+            text-decoration: none;
+            }
+        }
+    }
+
+    .widget404{
+        width: 30%;
+        border-left: rgba(128, 128, 128, 0.445) 1px solid;
+
+        aside{
+            margin-left: 10%;
+        }
+    }
+}

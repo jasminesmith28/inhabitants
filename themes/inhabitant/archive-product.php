@@ -16,7 +16,12 @@ get_header(); ?>
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
+			<?php foreach (get_terms(array("taxonomy" => "product-type")) as $product_type): ?>
+     		<a href="<?php echo get_term_link($product_type->slug, 'product-type' ); ?>"><?php echo $product_type->name ?></a>
+            <?php endforeach;?>
+
 			</header><!-- .page-header -->
+
 
 			<section class="productMainContainer">
 			<?php /* Start the Loop */ ?>
@@ -32,13 +37,6 @@ get_header(); ?>
 				</div>
 
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
 		<?php endif; ?>
 		</section>
 
