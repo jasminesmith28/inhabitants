@@ -6,7 +6,6 @@
  * Learn more: https://github.com/Automattic/_s/pull/136
  */
 
-$().on('click', function(){
-
-    
-})
+$('.phone').on('click', function(){
+alert('Open FaceTime?')
+});
