@@ -71,7 +71,7 @@
 
 	.widgetSidebar{
         width: 30%;
-        border-left: rgba(128, 128, 128, 0.445) 1px solid;
+		border-left: rgba(128, 128, 128, 0.445) 1px solid;
 
         aside{
             margin-left: 10%;
@@ -113,6 +113,10 @@ footer{
 	.widget-area{
 		display: flex;
 		width: 520px;
+
+		a{
+			color: white;
+		}
 
 		h2{
 			color: orange;

@@ -9,3 +9,4 @@
 $('.phone').on('click', function(){
 alert('Open FaceTime?')
 });
+
