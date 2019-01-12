@@ -51,22 +51,6 @@ get_header(); ?>
 <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
-<h1>ADVENTURE</h1>
-<section class="adventure">
-<?php
-   $args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => '4');
-   $adventure_posts = get_posts( $args ); // returns an array of posts
-?>
-<div class ="selectAdventure">
-<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
-<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-   <?php the_post_thumbnail();?> 
-<?php endforeach; wp_reset_postdata(); ?>
-</div>
-</section>
-
-
-
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
