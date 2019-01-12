@@ -6,7 +6,8 @@
 
 a {
 	color: $color__link;
-	font-family: 'Novovento';
+	font-family: $font__main;
+	font-weight: 400;
 
 	&:visited {
 		color: $color__link-visited;
@@ -62,6 +63,8 @@ a {
 
 			a {
 				width: 200px;
+				font-family: $font__main;
+				font-weight: 400;
 			}
 
 			:hover > a,

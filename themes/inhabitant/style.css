@@ -289,12 +289,12 @@ textarea {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: 'Novovento'; }
+  font-family: sans-serif; }
 
 /* Copy */
 p {
   margin-bottom: 1.5rem;
-  font-family: 'Merriweather'; }
+  font-family: sans-serif; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -439,7 +439,8 @@ fieldset {
 /* Links */
 a {
   color: royalblue;
-  font-family: 'Novovento'; }
+  font-family: sans-serif;
+  font-weight: 400; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -476,7 +477,9 @@ a {
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
-        width: 200px; }
+        width: 200px;
+        font-family: sans-serif;
+        font-weight: 400; }
       .main-navigation ul ul :hover > a,
       .main-navigation ul ul .focus > a {
         color: black; }
@@ -833,7 +836,8 @@ object {
 .home {
   text-align: center; }
   .home .logo-banner {
-    background-image: url(../../../../../wp-content/themes/inhabitant/image/home-hero.jpg);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.103)), to(rgba(0, 0, 0, 0.452))), url(../../../../../wp-content/themes/inhabitant/image/home-hero.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.103) 0%, rgba(0, 0, 0, 0.452) 100%), url(../../../../../wp-content/themes/inhabitant/image/home-hero.jpg);
     background-size: cover, cover;
     width: 100%;
     display: -webkit-box;
